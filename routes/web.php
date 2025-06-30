@@ -45,9 +45,15 @@ Route::post('/leger/generate', [LegerJalanUtamaController::class, 'legerGenerate
 Route::post('/leger/print', [LegerJalanUtamaController::class, 'legerPrint'])->name('admin.leger.jalanUtama.print');
 Route::post('/leger/print-all', [LegerJalanUtamaController::class, 'legerPrintAll'])->name('admin.leger.jalanUtama.print-all');
 
-
 // Input Page
 Route::get('/input/ruas', [InputController::class, 'ruas'])->name('input.ruas');
 Route::post('/input/ruas/store', [InputController::class, 'storeRuas'])->name('input.ruas.store');
 Route::get('/input/aset', [InputController::class, 'aset'])->name('input.aset');
 Route::post('/input/aset/store', [InputController::class, 'storeAset'])->name('input.aset.store');
+
+// Leger Patok Page
+Route::get('/leger/patok/view', [LegerPatokController::class, 'legerViewSelect'])->name('admin.leger.patok.view.select');
+Route::post('/leger/patok/view/detail', [LegerPatokController::class, 'legerViewDetail'])->name('admin.leger.patok.view.detail');
+Route::post('/leger/patok/generate', [LegerPatokController::class, 'legerGenerate'])->name('admin.leger.patok.generate');
+Route::post('/leger/patok/print', [LegerPatokController::class, 'legerPrint'])->name('admin.leger.patok.print');
+Route::post('/leger/patok/print-all', [LegerPatokController::class, 'legerPrintAll'])->name('admin.leger.patok.print-all');
