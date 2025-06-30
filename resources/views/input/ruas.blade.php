@@ -47,7 +47,7 @@
                         </div>
                         <div class="form-group mb-4">
                             <label class="d-block">Tahun <span class="text-danger">*</span></label>
-                            <input type="text" name="tahun" class="form-control">
+                            <input type="text" name="tahun" class="form-control" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
                         <div class="form-group text-right mt-5">
                             <button type="submit" class="btn btn-primary">

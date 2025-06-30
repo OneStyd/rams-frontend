@@ -40,7 +40,7 @@
                             @csrf
                             <div class="form-group mb-4">
                                 <label class="d-block">Ruas Jalan Tol <span class="text-danger">*</span></label>
-                                <select class="form-control select2" id="ruas_id" name="ruas_id" style="width:100%">
+                                <select class="form-control select2" id="ruas_id" name="ruas_id" required style="width:100%">
                                     <option disabled selected>-- Pilih Ruas --</option>
                                     @foreach ($list_ruas as $ruas)
                                         <option value="{{ $ruas['id'] }}">{{ $ruas['nama'] }} ({{ $ruas['tahun'] }})</option>
@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group mb-4">
                                 <label class="d-block">Tipe Aset <span class="text-danger">*</span></label>
-                                <select class="form-control select2" id="tipe_aset" name="tipe_aset" style="width:100%">
+                                <select class="form-control select2" id="tipe_aset" name="tipe_aset" required style="width:100%">
                                     <option disabled selected>-- Pilih Tipe Aset --</option>
                                     @foreach ($tipe_aset as $aset)
                                         <option value="{{ $aset['type'] }}">{{ $aset['text'] }}</option>
@@ -59,7 +59,7 @@
                             <div class="form-group mb-4">
                                 <label class="d-block">File GeoJSON <span class="text-danger">*</span></label>
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="geojson" name="geojson" onchange="updateFileName()">
+                                    <input type="file" class="custom-file-input" id="geojson" name="geojson" required onchange="updateFileName()">
                                     <label class="custom-file-label" for="geojson">Choose file</label>
                                 </div>
                             </div>
