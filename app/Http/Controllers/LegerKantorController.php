@@ -12,7 +12,7 @@ class LegerKantorController extends Controller
 {
     public function legerViewSelect(Request $request)
     {
-        $api = "http://127.0.0.1:8000/api/leger/ruas";
+        $api = "http://117.53.47.111:91/api/leger/ruas";
         $response = Http::withHeaders([
             'Accept' => 'application/json',
             'Authorization' => 'Bearer ' . $request->session()->get('token'),
@@ -25,7 +25,7 @@ class LegerKantorController extends Controller
 
     public function legerViewDetail(Request $request)
     {
-        $api = "http://127.0.0.1:8000/api/leger/segmen/{$request->jalan_tol_id}";
+        $api = "http://117.53.47.111:91/api/leger/segmen/{$request->jalan_tol_id}";
         $response = Http::withHeaders([
             'Accept' => 'application/json',
             'Authorization' => 'Bearer ' . $request->session()->get('token'),
@@ -39,7 +39,7 @@ class LegerKantorController extends Controller
 
     public function legerPrint(Request $request)
     {
-        $url = "http://127.0.0.1:8000/api/leger/kantor/{$request->jalan_tol_id}/{$request->leger_id_awal}/{$request->leger_id_akhir}";
+        $url = "http://117.53.47.111:91/api/leger/kantor/{$request->jalan_tol_id}/{$request->leger_id_awal}/{$request->leger_id_akhir}";
         $data = Http::withHeaders([
             'Accept' => 'application/json',
             'Authorization' => 'Bearer ' . $request->session()->get('token'),
@@ -67,7 +67,7 @@ class LegerKantorController extends Controller
 
     public function legerPrintAll(Request $request)
     {
-        $url = "http://127.0.0.1:8000/api/leger/kantor-all/{$request->jalan_tol_id}";
+        $url = "http://117.53.47.111:91/api/leger/kantor-all/{$request->jalan_tol_id}";
         $data = Http::withHeaders([
             'Accept' => 'application/json',
             'Authorization' => 'Bearer ' . $request->session()->get('token'),
