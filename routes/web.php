@@ -45,6 +45,14 @@ Route::post('/leger/generate', [LegerJalanUtamaController::class, 'legerGenerate
 Route::post('/leger/print', [LegerJalanUtamaController::class, 'legerPrint'])->name('admin.leger.jalanUtama.print');
 Route::post('/leger/print-all', [LegerJalanUtamaController::class, 'legerPrintAll'])->name('admin.leger.jalanUtama.print-all');
 
+// Leger Jembatan Page
+Route::get('/leger/view', [LegerJembatanController::class, 'legerViewSelect'])->name('admin.leger.jalanUtama.view.select');
+Route::get('/leger/edit', [LegerJembatanController::class, 'legerEditSelect'])->name('admin.leger.jalanUtama.edit.select');
+Route::post('/leger/view/detail', [LegerJembatanController::class, 'legerViewDetail'])->name('admin.leger.jalanUtama.view.detail');
+Route::post('/leger/edit/detail', [LegerJembatanController::class, 'legerEditDetail'])->name('admin.leger.jalanUtama.edit.detail');
+Route::post('/leger/generate', [LegerJembatanController::class, 'legerGenerate'])->name('admin.leger.jalanUtama.generate');
+Route::post('/leger/print', [LegerJembatanController::class, 'legerPrint'])->name('admin.leger.jalanUtama.print');
+Route::post('/leger/print-all', [LegerJembatanController::class, 'legerPrintAll'])->name('admin.leger.jalanUtama.print-all');
 
 // Input Page
 Route::get('/input/ruas', [InputController::class, 'ruas'])->name('input.ruas');
